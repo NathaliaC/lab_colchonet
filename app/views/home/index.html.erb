@@ -1,0 +1,18 @@
+<h1>Quartos recém postados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> Titulo </th>
+      <th> Localização </th>
+    </tr>
+  </thead>
+</table>
+
+<p>
+  <ul>
+    <% @rooms.each do |room|  %>
+      <li><%= link_to room.complete_name, room %></li>
+    <% end %>
+  </ul>
+</p>

@@ -1,0 +1,12 @@
+<!--Barra de navegação para usuários logados -->
+<nav>
+  <ul>
+    <li><%= link_to t('layout.new_room'), new_room_path%></li>
+    <li><%= link_to t('layout.rooms'), rooms_path %></li>
+    <li><%= link_to t('layout.my_profile'), user_path(current_user) %></li>
+    <li><%= link_to t('layout.signout'), user_sessions_path, :method => :delete %></li>
+  </ul>
+</nav>
+
+<!--Mecanismo do rails para executar uma função DELETE em todos os browsers. Ação que realiza o logout, ou seja, excluir a sessão atual do usuário, via ação destroy -->
+<a href="/pt-BR/user_sessions" data-method="delete" rel="nofollow"></a>
